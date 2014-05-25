@@ -1,0 +1,15 @@
+application: ##APPNAME## 
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /images
+  static_dir: images
+
+- url: /prefs
+  script: prefs.py
+  login: required
+
+- url: /.*
+  script: main.py
